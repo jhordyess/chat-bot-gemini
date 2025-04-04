@@ -1,6 +1,6 @@
 'use client'
 import { useCallback, useState } from 'react'
-import { sendMessage2AI } from '../services/chatAI'
+import { sendMessage2AI } from '@/services/chatAI'
 
 export default function Home() {
   const [messages, setMessages] = useState([{ message: 'Ask me anything', role: 'model' }])
