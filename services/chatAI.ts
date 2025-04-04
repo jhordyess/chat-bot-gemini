@@ -20,7 +20,7 @@ const model = genAI.getGenerativeModel({
   ]
 })
 
-type SendMessage = (args: {
+type SendMessage2AI = (args: {
   question: string
   messageList?: { role: string; message: string }[]
 }) => Promise<{
@@ -28,7 +28,7 @@ type SendMessage = (args: {
   error?: string
 }>
 
-export const sendMessage: SendMessage = async ({ question, messageList }) => {
+export const sendMessage2AI: SendMessage2AI = async ({ question, messageList }) => {
   try {
     if (!question) return { error: 'Question is required' }
 
