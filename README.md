@@ -8,6 +8,7 @@ The Chat Bot App allows users to interact with a chatbot powered by the Gemini A
 
 ### Technologies Used
 
+- JS Libraries: [Google AI SDK for JavaScript](https://www.npmjs.com/package/@google/generative-ai)
 - Framework: [Next.js](https://nextjs.org/)
 - Fonts: [Geist](https://fonts.google.com/specimen/Geist), [Geist Mono](https://fonts.google.com/specimen/Geist+Mono)
 - Styling: [Tailwind CSS](https://tailwindcss.com/)
