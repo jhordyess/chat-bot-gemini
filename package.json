@@ -1,6 +1,18 @@
 {
   "name": "chat-bot-gemini",
-  "version": "0.1.0",
+  "description": "Chatbot using Google Gemini API",
+  "version": "1.0.0",
+  "author": "Jhordy Gavinchu <dev@jhordyess.com>",
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "google",
+    "gemini",
+    "chatbot"
+  ],
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
