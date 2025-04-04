@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Chat Bot App
 
-## Getting Started
+A simple chat bot application built using Next.js and the Gemini API.
 
-First, run the development server:
+## Description
+
+The Chat Bot App allows users to interact with a chatbot powered by the Gemini API. It is designed to provide a seamless and responsive user experience with a clean and modern UI.
+
+### Technologies Used
+
+- Framework: [Next.js](https://nextjs.org/)
+- Fonts: [Geist](https://fonts.google.com/specimen/Geist), [Geist Mono](https://fonts.google.com/specimen/Geist+Mono)
+- Styling: [Tailwind CSS](https://tailwindcss.com/)
+- Programming Language: [TypeScript](https://www.typescriptlang.org/)
+
+## How to use
+
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone git@github.com:jhordyess/chat-bot-gemini.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Open the project folder:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+cd chat-bot-gemini
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Install the dependencies:
 
-## Learn More
+```bash
+yarn install
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. Create a `.env` file in the root directory and add your Gemini API key:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```env
+GEMINI_API_KEY=your_api_key_here
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Replace `your_api_key_here` with your actual Gemini API key.
+You can obtain an API key by signing up on the [Google AI Studio](https://aistudio.google.com/app/apikey). Follow the instructions to generate an API key and copy it to your `.env` file.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. Run the project:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+yarn dev
+```
+
+5. Open the browser at <http://localhost:3000/>
+
+## To-Do
+
+- Improve UI/UX design.
+
+## Contribution
+
+If you would like to contribute to the project, open an issue or make a pull request on the repository.
+
+## License
+
+© 2025> [Jhordyess](https://github.com/jhordyess). Under the [MIT](https://choosealicense.com/licenses/mit/) license. See the [LICENSE](./LICENSE) file for more details.
+
+---
+
+Made with 💪 by [Jhordyess](https://www.jhordyess.com/)
