@@ -3,14 +3,22 @@ import { useCallback, useState } from 'react'
 import { sendMessage2AI } from '@/services/chatAI'
 
 export default function Home() {
-  const [messages, setMessages] = useState([{ message: 'Ask me anything', role: 'model' }])
+  const [messages, setMessages] = useState<
+    Array<{
+      message: string
+      role: 'user' | 'model'
+    }>
+  >([])
   const [input, setInput] = useState('')
   const [status, setStatus] = useState<'idle' | 'error' | 'typing' | 'success'>('idle')
 
   const sendMessage = useCallback(async () => {
     if (!input.trim()) return
 
-    const userMessage = { message: input, role: 'user' }
+    const userMessage: {
+      message: string
+      role: 'user' | 'model'
+    } = { message: input, role: 'user' }
     setStatus('typing')
 
     const { error, response } = await sendMessage2AI({
@@ -19,10 +27,10 @@ export default function Home() {
     })
 
     if (error || !response) {
-      setMessages(prev => [...prev, { message: `Error: ${error}`, role: 'model' }])
+      setMessages(prev => [...prev, userMessage, { message: `Error: ${error}`, role: 'model' }])
       setStatus('error')
     } else {
-      setMessages(prev => [...prev, { message: response, role: 'model' }])
+      setMessages(prev => [...prev, userMessage, { message: response, role: 'model' }])
       setStatus('success')
       setInput('')
     }
@@ -36,6 +44,10 @@ export default function Home() {
         </header>
 
         <div className="flex h-96 flex-col space-y-4 overflow-y-auto p-4">
+          <div className="flex justify-start">
+            <div className="rounded-lg bg-gray-200 px-4 py-2 text-black">Ask me anything</div>
+          </div>
+
           {messages.map((msg, index) => (
             <div
               key={index}
